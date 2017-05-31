@@ -13,9 +13,9 @@
       return;
     }
 
-    for (var userData in userList){
-        if(userData["user"] == user) {
-          alert(userData["val"]);
+    for (var i = 0 ; i < userList.length ; i++){
+        if(userData[i]["user"] == user) {
+          alert(userData[i]["val"]);
           break;
         }
     }
