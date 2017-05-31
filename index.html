@@ -6,10 +6,15 @@
 
 (function input()
 {
-  var userData = $.getJSON('data.json', function(data) {
-    console.log(data);
+  var userData = $.getJSON('data.json', function(userList) {
     var user = prompt('사번을 입력해주세요');
-    alert(data[user]);
+
+    $.each(userList, function(entry) {
+        if (entry["user"] == user) {
+            alert(entry["val"]);
+            return false;
+        }
+    });
   });
 })();
 </script>
