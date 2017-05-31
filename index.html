@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script>
+
+(function input()
+{
+  var userData = $.getJSON('data.json', function(data) {
+    console.log(data);
+    var user = prompt('사번을 입력해주세요');
+    alert(data[user]);
+  });
+})();
+</script>
+</head>
+</html>
