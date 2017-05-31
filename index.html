@@ -9,6 +9,10 @@
   var userData = $.getJSON('data.json', function(userList) {
     var user = prompt('사번을 입력해주세요');
 
+    if (user == null) {
+      return;
+    }
+
     for (var i = 0; i < userList.length; i++){
         if(userList["user"] == user) {
           alert(entry["val"]);
