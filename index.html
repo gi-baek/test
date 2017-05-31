@@ -9,12 +9,12 @@
   var userData = $.getJSON('data.json', function(userList) {
     var user = prompt('사번을 입력해주세요');
 
-    $.each(userList, function(entry) {
-        if (entry["user"] == user) {
-            alert(entry["val"]);
-            return false;
+    for (var i = 0; i < userList.length; i++){
+        if(userList["user"] == user) {
+          alert(entry["val"]);
+          break;
         }
-    });
+    }
   });
 })();
 </script>
